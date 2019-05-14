@@ -1,0 +1,22 @@
+<div class="row" >
+<!-- <div class="col-md-4"> -->
+  <ng-container *ngFor="let product of products$ | async "> 
+<p>
+  <!-- <ng-template [appIf]="product.title != 'Some title'">
+
+  </ng-template> -->
+  <app-product [product1]="product" (myOutput$)="parentHandleClick($event)" 
+  *appIf="product.title != 'Some title'"
+
+  >
+       <h5 slot>
+              <h1 slot>{{product.title}}</h1>
+            </h5>
+            <p slot class="card-text">
+              {{product.description}}
+            </p>
+  </app-product>
+</p>
+</ng-container>
+</div>
+<!-- </div> -->

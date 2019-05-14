@@ -1,0 +1,28 @@
+  <!-- Product -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+     
+        <img class="card-img-top"  [src]="product1.imageSrc" appZoom>
+          <div class="card-body">
+              <ng-content select="[slot]"></ng-content>
+            <p class="card-text">
+                {{product1.price | currencyPipe}} 
+              </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">
+                {{product1.likesNo}}
+              </small>
+              <small class="text-muted">
+                {{product1.commentsNo}}
+              </small>
+              <!-- <div *ngIf="showDetails">
+              <button class="btn btn-primary" (click)="handleClick()">More details</button>
+            </div> -->
+              <button class="btn btn-primary" (click)="showDetails = !showDetails">Toogle details</button>
+            </div>  
+          </div>
+      </div>
+    </div>
+  </div>
