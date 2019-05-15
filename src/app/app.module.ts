@@ -5,11 +5,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { ProductModule } from './product/product.module';
 import { DummyComponent } from './dummy/dummy.component';
-// import { ProductComponent } from './product/product.component';
-// import { ProductListComponent } from './product-list/product-list.component';
-// import { IfDirective } from './if.directive';
-// import { ZoomDirective } from './zoom.directive';
-// import { CurrencyPipe } from './currencyPipe';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +16,8 @@ import { DummyComponent } from './dummy/dummy.component';
   imports: [
     BrowserModule,
     // SharedModule,
-    ProductModule
+    ProductModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
